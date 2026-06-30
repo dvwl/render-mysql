@@ -3,3 +3,4 @@
 FROM mysql:8.4
 
 COPY config/user.cnf /etc/mysql/my.cnf
+RUN chmod 644 /etc/mysql/conf.d/custom.cnf
