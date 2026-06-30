@@ -1,3 +1,17 @@
 [mysqld]
 # Listen on all interfaces
 bind-address=0.0.0.0
+
+# Memory tuning for 512MB container
+innodb_buffer_pool_size = 128M
+innodb_log_buffer_size  = 16M
+tmp_table_size          = 16M
+max_heap_table_size     = 16M
+
+# Connection limits
+max_connections         = 25
+thread_cache_size       = 4
+table_open_cache        = 64
+
+# Disable performance schema (saves ~50-80MB)
+performance_schema      = OFF
